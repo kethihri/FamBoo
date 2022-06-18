@@ -15,12 +15,34 @@
 
             <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="family_member_image" width="150px" height="200px">
             <h4 id="family_member_name"></h4>
-            <button>onclick="update();"Next<button>
-           <!-- Debug the above code to create a button with onclick functionality as given below-->
-            <!-- <button onclick="update();">Next</button>  -->
+            <button
+             style="border:solid;
+             border-width: 2px;
+             color: aliceblue;
+             background-color: palevioletred;
+             border-color: rgb(0, 129, 86);" onclick="update();">Next</button>
           
         </center>
 
-        <script src="main.js"></script>
+        <script>
+            var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+var names = ["Family Book","Ranbir Singh", "Diljeet Singh", "Rocky Singh", "Alia Singh", "Soni Singh"];
+var i = 0;
+function update()
+{
+    i++;
+    var numbers_of_family_member_in_array = 5
+    if(i > numbers_of_family_member_in_array)
+      {
+          i = 0;
+      }
+    
+    var updatedImage = images[i];
+    var updatedName = names[i] ;
+ 
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
+}
+        </script>
     </body>
 </html>
